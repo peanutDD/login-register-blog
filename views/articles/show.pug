@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+  h1= article.title
+  h5 Written by #{author}
+  p= article.body
+  br
+  if user && user.id == article.author
+    a(href="/articles/" + article.id + "/edit").btn.btn-primary.mr-2 Edit
+    a(href="#", data-id= article._id).btn.btn-danger.delete-article Delete
