@@ -18,6 +18,8 @@ router.get('/:id', function (req, res) {
         article: article,
         author: user.name
       })
+      console.log(user)
+
     })
   })
 })
